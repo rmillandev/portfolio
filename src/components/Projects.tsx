@@ -8,8 +8,8 @@ export function Projects() {
       <div className="section-shell">
         <SectionHeader
           eyebrow="Proyectos destacados"
-          title="Casos de estudio antes que tarjetas sueltas"
-          description="Cada proyecto muestra problema, solucion, tecnologias y estado para contar mejor el valor tecnico."
+          title=""
+          description="Proyectos personales donde aplico de manera autodidacta mis conocimientos y retos en diferentes tecnologias"
         />
 
         <div className="projects-grid">

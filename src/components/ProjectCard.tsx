@@ -65,10 +65,14 @@ export function ProjectCard({ project, index }: ProjectCardProps) {
             GitHub
             <Github size={17} aria-hidden="true" />
           </a>
-          <a className="text-link" href={project.demo} {...linkProps(project.demo)}>
-            Demo
-            <ExternalLink size={17} aria-hidden="true" />
-          </a>
+          {project.demo && project.demo !== "" ? (
+            <a className="text-link" href={project.demo} {...linkProps(project.demo)}>
+              Demo
+              <ExternalLink size={17} aria-hidden="true" />
+            </a>
+          ) : (
+            <p className="text-link">Sin demo</p>
+          )}
         </div>
       </div>
     </article>

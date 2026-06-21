@@ -72,60 +72,32 @@ export const strengths = [
 
 export const projects: Project[] = [
   {
-    title: "API para extraccion de datos de comprobantes",
+    title: "MVP Sistema Integral de Prescripciones",
     summary:
-      "API disenada para recibir imagenes de comprobantes de pago y extraer informacion relevante como fecha, valor, banco, referencia y numero de comprobante.",
+      "Sistema web para la gestión, control y descarga de prescripciones médicas estructurado por roles.",
     problem:
-      "Muchas empresas reciben comprobantes de pago en imagen y deben revisar la informacion manualmente.",
+      "Necesidad de centralizar y digitalizar el flujo de recetas médicas de forma ágil, permitiendo a médicos prescribir de forma directa y a pacientes llevar un control de su consumo sin depender de catálogos rígidos de productos.",
     solution:
-      "Se plantea una API que recibe una imagen, procesa el documento y devuelve una respuesta estructurada en formato JSON.",
-    technologies: [".NET", "C#", "API REST", "OCR", "JSON", "Postman"],
+      "Desarrollo de una solución de software de extremo a extremo basada en una arquitectura limpia. Implementa un sistema de autenticación y autorización para 3 roles independientes (Médico, Paciente, Administrador), un motor de generación de documentos en PDF para las recetas, y un tablero de analíticas para el seguimiento de estados.",
+    technologies: ["TypeScript", "NextJS", "NestJS", "Prisma ORM", "Postgre SQL", "JWT"],
     status: "Prototipo / En desarrollo",
-    github: "#",
+    github: "https://github.com/rmillandev/prescripciones",
     demo: "#",
     accent: "cyan",
   },
   {
-    title: "Sistema de metricas por fecha",
+    title: "API Automatizacion Rutina GYM",
     summary:
-      "Aplicacion para consultar informacion filtrada por fecha inicial, fecha final y empresa, mostrando resultados organizados para analisis.",
+      "Backend para gestionar mis rutinas de entrenamiento",
     problem:
-      "Los usuarios necesitan consultar informacion especifica por rangos de fecha de forma rapida y clara.",
+      "En mi rutina de entrenamiento necesitaba llevar el control en cada dia que vaya al gym y que se fuera registrando en mi google calendar.",
     solution:
-      "Se construye un endpoint que recibe parametros de consulta y devuelve datos listos para ser visualizados en una tabla.",
-    technologies: ["C#", "ASP.NET Core", "SQL Server", "JavaScript", "HTML", "CSS"],
-    status: "Demo funcional",
-    github: "#",
-    demo: "#",
-    accent: "blue",
-  },
-  {
-    title: "API segura con autenticacion JWT",
-    summary:
-      "Backend con autenticacion mediante JWT, manejo de usuarios y proteccion de rutas segun roles.",
-    problem:
-      "Muchas aplicaciones necesitan controlar el acceso a ciertas funciones segun el tipo de usuario.",
-    solution:
-      "Se implementa login, generacion de token, rutas protegidas y validacion de roles.",
-    technologies: ["NestJS", "Node.js", "JWT", "Prisma", "PostgreSQL"],
+      "Se implementa una API que consume un servicio de automatizacion construido en N8N que se conecta al google calendar para llevar el control de las secciones de entrenamiento.",
+    technologies: ["C#", ".NET Core", "N8N"],
     status: "Proyecto personal",
-    github: "#",
-    demo: "#",
+    github: "https://github.com/rmillandev/api-gymautomation-n8n",
+    demo: "",
     accent: "green",
-  },
-  {
-    title: "App Android consumiendo API",
-    summary:
-      "Aplicacion movil sencilla que consume informacion desde una API y muestra datos en pantalla.",
-    problem:
-      "Se necesita conectar una aplicacion movil con servicios backend para consultar informacion en tiempo real.",
-    solution:
-      "Se desarrolla una app Android que realiza peticiones HTTP, procesa respuestas JSON y muestra resultados al usuario.",
-    technologies: ["Kotlin", "Android", "API REST", "JSON"],
-    status: "Practica / Laboratorio",
-    github: "#",
-    demo: "#",
-    accent: "amber",
   },
 ];
 
