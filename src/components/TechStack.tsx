@@ -7,8 +7,8 @@ export function TechStack() {
       <div className="section-shell">
         <SectionHeader
           eyebrow="Tecnologias"
-          title="Herramientas agrupadas por contexto"
-          description="La lectura queda organizada por uso real: backend, frontend, datos, herramientas e integraciones."
+          title=""
+          description="Herramientas y tecnologias agrupadas por contexto"
         />
 
         <div className="tech-grid">

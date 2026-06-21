@@ -142,28 +142,27 @@ export const experienceCases: ExperienceCase[] = [
 export const technologyGroups: TechnologyGroup[] = [
   {
     category: "Backend",
-    items: ["C#", "ASP.NET Core", ".NET", "NestJS", "Node.js", "APIs REST", "JWT"],
+    items: ["C#", "ASP.NET Core", "NestJS", "APIs REST", "JWT"],
   },
   {
     category: "Frontend",
-    items: ["HTML", "CSS", "JavaScript", "React", "Consumo de APIs", "Diseno responsivo"],
+    items: ["HTML", "CSS", "JavaScript", "TypeScript", "React", "Kotlin"],
   },
   {
     category: "Bases de datos",
-    items: ["SQL Server", "PostgreSQL", "Prisma", "Consultas SQL"],
+    items: ["SQL Server", "PostgreSQL", "Prisma ORM"],
   },
   {
     category: "Herramientas",
-    items: ["Git", "GitHub", "Visual Studio", "Visual Studio Code", "Postman", "IIS"],
+    items: ["Git", "GitHub", "Visual Studio", "Visual Studio Code", "Postman", "Android Studio"],
   },
   {
     category: "Integraciones y servicios",
-    items: ["OpenAI API", "Google Document AI", "OCR", "Servicios REST", "JSON"],
+    items: ["OpenAI API", "Google Document AI", "Servicios REST"],
   },
 ];
 
 export const workPrinciples = [
-  "Me gusta documentar lo que construyo.",
   "Me interesa escribir codigo claro y mantenible.",
   "Me enfoco en entender el problema antes de programar.",
   "Estoy mejorando constantemente mis habilidades tecnicas.",

@@ -8,18 +8,12 @@ export function About() {
         <SectionHeader
           eyebrow="Sobre mi"
           title="Aprender construyendo y resolviendo problemas reales"
-          description="Una mirada mas humana del proceso: entender el sistema, ordenar el codigo y mejorar con cada entrega."
+          description=""
         />
 
         <div className="about-panel">
           <p>
-            Me gusta aprender construyendo proyectos y resolviendo problemas reales. Disfruto
-            entender como funciona un sistema por dentro, desde la base de datos hasta la API y la
-            interfaz que consume la informacion.
-          </p>
-          <p>
-            Actualmente estoy fortaleciendo mis conocimientos en desarrollo backend, arquitectura de
-            APIs, buenas practicas, cloud y desarrollo fullstack. Mi objetivo es seguir creciendo
+            Actualmente estoy fortaleciendo mis conocimientos en desarrollo fullstack, buenas practicas, clean code, cloud. Mi objetivo es seguir creciendo
             como desarrollador y construir soluciones cada vez mas completas, ordenadas y utiles.
           </p>
 
