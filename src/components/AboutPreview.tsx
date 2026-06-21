@@ -8,7 +8,6 @@ export function AboutPreview() {
         <SectionHeader
           eyebrow="Presentacion breve"
           title="Soluciones practicas conectadas con procesos reales"
-          description="Un perfil tecnico orientado a construir servicios claros, mantenibles y faciles de integrar."
         />
 
         <div className="intro-copy" id="presentacion-title">
@@ -19,7 +18,7 @@ export function AboutPreview() {
             una empresa.
           </p>
           <p>
-            He tenido experiencia trabajando con tecnologias como C#, .NET, SQL Server, JavaScript
+            He tenido experiencia trabajando con distintas tecnologias 
             y servicios externos. Tambien me interesa seguir fortaleciendo mis conocimientos en
             arquitectura, cloud, buenas practicas y desarrollo fullstack.
           </p>

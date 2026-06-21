@@ -1,4 +1,0 @@
-CV placeholder - Ronald
-
-Reemplaza este archivo por tu CV real cuando este listo.
-Si usas PDF, guarda el archivo en public/cv/ y actualiza profile.cvUrl en src/data/profile.ts.

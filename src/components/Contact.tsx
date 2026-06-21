@@ -47,10 +47,6 @@ export function Contact() {
               Ver LinkedIn
               <Linkedin size={18} aria-hidden="true" />
             </a>
-            <a className="button button--ghost" href={profile.cvUrl} download>
-              Descargar CV
-              <FileDown size={18} aria-hidden="true" />
-            </a>
           </div>
         </div>
       </div>

@@ -16,7 +16,7 @@ export interface ExperienceCase {
   title: string;
   description: string;
   technologies: string[];
-  icon: "server" | "bug" | "mobile" | "workflow";
+  company?: string;
 }
 
 export interface TechnologyGroup {
@@ -26,15 +26,39 @@ export interface TechnologyGroup {
 
 export const profile = {
   name: "Ronald",
-  role: "Desarrollador enfocado en backend, APIs e integracion de sistemas reales.",
+  role: "Mi enfoque principal esta orientado a soluciones que optimizan la operación, experiencia del usuario y automatización de procesos.",
   intro:
-    "Construyo aplicaciones, servicios y herramientas que ayudan a resolver problemas reales de negocio, especialmente en sistemas administrativos, consumo de APIs, automatizacion de procesos e integracion con servicios externos.",
-  email: "correo@ejemplo.com",
-  github: "https://github.com/usuario",
-  linkedin: "https://linkedin.com/in/usuario",
-  location: "Colombia",
-  cvUrl: "/cv/CV_Ronald.txt",
+    "Tengo experiencia desarrollando soluciones para problemas reales de negocio, con especial énfasis en sistemas administrativos e integración de servicios externos. He impulsado la eficiencia operativa mediante la optimización y automatización de procesos, transformando tareas repetitivas en flujos de trabajo ágiles.",
+  email: "rmillandev@gmail.com",
+  github: "https://github.com/rmillandev",
+  linkedin: "https://www.linkedin.com/in/ronald-millan/",
+  location: "Colombia"
 };
+
+export interface Company {
+  name: string;
+  start: string; // e.g. "Mar 2022" or "2021"
+  end: string; // e.g. "Jun 2024" or "Present"
+  location?: string;
+  summary?: string;
+}
+
+export const companies: Company[] = [
+  {
+    name: "G&G Retail",
+    start: "Abril 2024",
+    end: "Actualidad",
+    location: "Sincelejo, Colombia",
+    summary:"",
+  },
+  {
+    name: "FRISBY",
+    start: "Octubre 2022",
+    end: "Abril 2023",
+    location: "Remoto",
+    summary: "",
+  },
+];
 
 export const strengths = [
   "Backend",
@@ -43,6 +67,7 @@ export const strengths = [
   "Integraciones",
   "Solucion de errores",
   "Aprendizaje continuo",
+  "Agentes de IA",
 ];
 
 export const projects: Project[] = [
@@ -106,32 +131,39 @@ export const projects: Project[] = [
 
 export const experienceCases: ExperienceCase[] = [
   {
-    title: "Publicacion de APIs en IIS",
+    title: "Automatizacion de procesos en areas contables",
     description:
-      "Trabajo en publicacion y configuracion de APIs en entornos IIS, revisando errores de configuracion, archivos faltantes, rutas, permisos y despliegue.",
-    technologies: ["ASP.NET Core", "IIS", "Windows Server", "Web.config"],
-    icon: "server",
+      "Trabajo en automatizar tareas repetitivas, desarrollando soluciones que facilitan la operacion y reducen errores humanos, llevando el control de ventas, pagos y reportes a un nuevo nivel de eficiencia.",
+    technologies: ["C#", ".NET Core", "SQL Server"],
+    company: "G&G Retail",
   },
   {
-    title: "Manejo de errores en endpoints",
+    title: "Desarrollo de app movil consumiendo servicios backend",
     description:
-      "Revision de problemas relacionados con parametros enviados a endpoints, validacion de fechas, valores nulos y estructura correcta de peticiones HTTP.",
-    technologies: ["C#", "ASP.NET Core", "Web API", "Postman"],
-    icon: "bug",
-  },
-  {
-    title: "Consumo de APIs desde aplicaciones externas",
-    description:
-      "Escenarios donde una aplicacion necesita consumir servicios backend, considerando red, localhost, IP local, puertos y pruebas desde otros dispositivos.",
-    technologies: ["Android", "Kotlin", "APIs REST", "HTTP"],
-    icon: "mobile",
+      "Desarrolle una app android, aplicando mejoras continuas y refactorizaciones, lo que permitio a los usuarios una mejor experiencia fluida y efeciente, ya que se agilizaron procesos debido a que se hizo una migracion de servicios de escritorio a movil.",
+    technologies: ["Android", "Kotlin", "APIs REST", "Jetpack Compose"],
+    company: "G&G Retail",
   },
   {
     title: "Integracion con servicios externos",
     description:
-      "Exploracion e integracion de servicios externos para automatizar o mejorar procesos, como extraccion de informacion desde documentos y validacion de respuestas.",
+      "Exploracion e integracion de servicios externos para automatizar o mejorar procesos, como extraccion de informacion desde documentos y validacion de respuestas. Integrando en el Backend para un mejor control, seguridad y asi mismo poder reutilizarse en cualquier app o servicio Frontend.",
     technologies: ["OpenAI API", "Google Document AI", "OCR", "JSON"],
-    icon: "workflow",
+    company: "G&G Retail",
+  },
+  {
+    title: "Implementacion API REST",
+    description:
+      "Participación en el diseño e implementación de endpoints de la API REST para la gestión de datos de los empleados, aplicando capa de seguridad con JWT.",
+    technologies: ["Java", "Spring Boot", "JWT"],
+    company: "FRISBY",
+  },
+  {
+    title: "Modelado de tablas para la base de datos",
+    description:
+      "Modelado de las tablas a usar para la gestion de datos de los empleados, diseñando primero los diagramas para luego llevarlos a codigo SQL y finalmente poder anexar las tablas en la base de datos.",
+    technologies: ["SQL"],
+    company: "FRISBY",
   },
 ];
 

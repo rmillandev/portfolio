@@ -592,8 +592,36 @@ ul {
 
 .experience-grid {
   display: grid;
-  grid-template-columns: repeat(4, minmax(0, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
   gap: 1rem;
+}
+
+.company-section {
+  margin-bottom: 2.5rem;
+}
+
+.company-header {
+  margin-bottom: 1rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.company-name {
+  color: var(--text);
+  font-size: 1.1rem;
+}
+
+.company-dates {
+  color: var(--subtle);
+  font-size: 0.95rem;
+}
+
+.company-summary {
+  margin-bottom: 1.5rem;
+  color: var(--muted);
+  font-size: 0.98rem;
+  line-height: 1.6;
 }
 
 .experience-card__icon {

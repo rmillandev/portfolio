@@ -10,7 +10,7 @@ export function Hero() {
       <div className="hero__overlay" aria-hidden="true" />
 
       <div className="hero__content section-shell">
-        <p className="hero__eyebrow">Backend / APIs REST / Integraciones</p>
+        <p className="hero__eyebrow">DESAROLLADOR DE SOFTWARE</p>
         <h1 id="hero-title">Hola, soy {profile.name}</h1>
         <p className="hero__subtitle">{profile.role}</p>
         <p className="hero__text">{profile.intro}</p>
@@ -24,21 +24,9 @@ export function Hero() {
             Contactarme
             <Mail size={18} aria-hidden="true" />
           </a>
-          <a className="button button--ghost" href={profile.cvUrl} download>
-            Descargar CV
-            <FileDown size={18} aria-hidden="true" />
-          </a>
         </div>
 
         <dl className="hero__stats" aria-label="Resumen profesional">
-          <div>
-            <dt>4</dt>
-            <dd>casos aplicados</dd>
-          </div>
-          <div>
-            <dt>5</dt>
-            <dd>categorias tech</dd>
-          </div>
           <div>
             <dt>CO</dt>
             <dd>{profile.location}</dd>

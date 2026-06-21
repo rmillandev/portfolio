@@ -1,5 +1,5 @@
 import { Bug, Server, Smartphone, Workflow } from "lucide-react";
-import { experienceCases } from "../data/profile";
+import { experienceCases, companies } from "../data/profile";
 import { SectionHeader } from "./SectionHeader";
 
 const icons = {
@@ -16,30 +16,38 @@ export function Experience() {
         <SectionHeader
           eyebrow="Experiencia aplicada"
           title="Problemas tecnicos resueltos en contextos reales"
-          description="Una forma segura de mostrar criterio tecnico sin exponer informacion privada de empresas o codigo confidencial."
         />
 
-        <div className="experience-grid">
-          {experienceCases.map((item) => {
-            const Icon = icons[item.icon];
+        {companies.map((c) => {
+          const casesForCompany = experienceCases.filter((ec) => ec.company === c.name);
+          return (
+            <div className="company-section" key={c.name}>
+              <div className="company-header">
+                <strong className="company-name">{c.name} | </strong>
+                <span className="company-dates">{c.start} – {c.end}</span>
+              </div>
+              {c.summary ? <p className="company-summary">{c.summary}</p> : null}
 
-            return (
-              <article className="experience-card" key={item.title}>
-                <div className="experience-card__icon" aria-hidden="true">
-                  <Icon size={23} />
-                </div>
-                <h3>{item.title}</h3>
-                <p>{item.description}</p>
-                <div className="tag-list">
-                  {item.technologies.map((technology) => (
-                    <span key={technology}>{technology}</span>
+              {casesForCompany.length > 0 && (
+                <div className="experience-grid">
+                  {casesForCompany.map((item) => (
+                    <article className="experience-card" key={item.title}>
+                      <h3>{item.title}</h3>
+                      <p>{item.description}</p>
+                      <div className="tag-list">
+                        {item.technologies.map((technology) => (
+                          <span key={technology}>{technology}</span>
+                        ))}
+                      </div>
+                    </article>
                   ))}
                 </div>
-              </article>
-            );
-          })}
-        </div>
+              )}
+            </div>
+          );
+        })}
       </div>
     </section>
   );
 }
+
