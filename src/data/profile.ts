@@ -7,8 +7,9 @@ export interface Project {
   solution: string;
   technologies: string[];
   status: string;
-  github: string;
-  demo: string;
+  github?: string;
+  demo?: string;
+  visualLabel?: string;
   accent: Accent;
 }
 
@@ -26,9 +27,9 @@ export interface TechnologyGroup {
 
 export const profile = {
   name: "Ronald",
-  role: "Mi enfoque principal esta orientado a soluciones que optimizan la operación, experiencia del usuario y automatización de procesos.",
+  role: "Desarrollo soluciones de software que mejoran procesos, conectan servicios y facilitan el trabajo de las personas.",
   intro:
-    "Tengo experiencia desarrollando soluciones para problemas reales de negocio, con especial énfasis en sistemas administrativos e integración de servicios externos. He impulsado la eficiencia operativa mediante la optimización y automatización de procesos, transformando tareas repetitivas en flujos de trabajo ágiles.",
+    "Trabajo con aplicaciones web, sistemas administrativos, automatización e integraciones. También desarrollo landing pages para negocios que necesitan presentar su oferta con claridad.",
   email: "rmillandev@gmail.com",
   github: "https://github.com/rmillandev",
   linkedin: "https://www.linkedin.com/in/ronald-millan/",
@@ -61,79 +62,87 @@ export const companies: Company[] = [
 ];
 
 export const strengths = [
-  "Backend",
+  "Desarrollo web",
+  "Diseño adaptable",
   "APIs REST",
   "Bases de datos",
   "Integraciones",
-  "Solucion de errores",
-  "Aprendizaje continuo",
-  "Agentes de IA",
+  "Automatización",
 ];
 
 export const projects: Project[] = [
   {
-    title: "MVP Sistema Integral de Prescripciones",
+    title: "Oikentra",
+    summary: "Aplicación de operaciones para pequeños negocios, desarrollada en equipo.",
+    problem: "Llevar ventas, gastos, inventario y caja en herramientas separadas dificulta ver el estado del negocio.",
+    solution: "Oikentra reúne esas tareas en una aplicación que también permite seguir trabajando sin conexión y sincronizar los datos.",
+    technologies: [],
+    status: "SaaS en equipo",
+    demo: "https://oikentra.com/",
+    visualLabel: "Oikentra",
+    accent: "green",
+  },
+  {
+    title: "Sistema integral de prescripciones",
     summary:
       "Sistema web para la gestión, control y descarga de prescripciones médicas estructurado por roles.",
     problem:
-      "Necesidad de centralizar y digitalizar el flujo de recetas médicas de forma ágil, permitiendo a médicos prescribir de forma directa y a pacientes llevar un control de su consumo sin depender de catálogos rígidos de productos.",
+      "Centralizar y digitalizar las recetas médicas para facilitar el trabajo de médicos y el seguimiento de los pacientes.",
     solution:
-      "Desarrollo de una solución de software de extremo a extremo basada en una arquitectura limpia. Implementa un sistema de autenticación y autorización para 3 roles independientes (Médico, Paciente, Administrador), un motor de generación de documentos en PDF para las recetas, y un tablero de analíticas para el seguimiento de estados.",
-    technologies: ["TypeScript", "NextJS", "NestJS", "Prisma ORM", "Postgre SQL", "JWT"],
-    status: "Prototipo / En desarrollo",
+      "Prototipo con acceso por roles, generación de recetas en PDF y un tablero para seguir sus estados.",
+    technologies: ["TypeScript", "Next.js", "NestJS", "Prisma ORM", "PostgreSQL", "JWT"],
+    status: "Prototipo en desarrollo",
     github: "https://github.com/rmillandev/prescripciones",
-    demo: "#",
     accent: "cyan",
   },
   {
-    title: "API Automatizacion Rutina GYM",
+    title: "Automatización de rutina de gimnasio",
     summary:
-      "Backend para gestionar mis rutinas de entrenamiento",
+      "API personal para registrar sesiones de entrenamiento.",
     problem:
-      "En mi rutina de entrenamiento necesitaba llevar el control en cada dia que vaya al gym y que se fuera registrando en mi google calendar.",
+      "Quería llevar un registro de mis entrenamientos en Google Calendar.",
     solution:
-      "Se implementa una API que consume un servicio de automatizacion construido en N8N que se conecta al google calendar para llevar el control de las secciones de entrenamiento.",
-    technologies: ["C#", ".NET Core", "N8N"],
+      "Conecté una API con una automatización en n8n para registrar las sesiones en el calendario.",
+    technologies: ["C#", ".NET Core", "n8n"],
     status: "Proyecto personal",
     github: "https://github.com/rmillandev/api-gymautomation-n8n",
-    demo: "",
     accent: "green",
   },
 ];
 
 export const experienceCases: ExperienceCase[] = [
   {
-    title: "Automatizacion de procesos en areas contables",
+    title: "Automatización de procesos en áreas contables",
     description:
-      "Trabajo en automatizar tareas repetitivas, desarrollando soluciones que facilitan la operacion y reducen errores humanos, llevando el control de ventas, pagos y reportes a un nuevo nivel de eficiencia.",
+      "Desarrollo soluciones para automatizar tareas repetitivas y facilitar el control de ventas, pagos y reportes, con menos errores manuales.",
     technologies: ["C#", ".NET Core", "SQL Server"],
     company: "G&G Retail",
   },
   {
-    title: "Desarrollo de app movil consumiendo servicios backend",
+    title: "Desarrollo de aplicación móvil conectada al backend",
     description:
-      "Desarrolle una app android, aplicando mejoras continuas y refactorizaciones, lo que permitio a los usuarios una mejor experiencia fluida y efeciente, ya que se agilizaron procesos debido a que se hizo una migracion de servicios de escritorio a movil.",
+      "Desarrollé una aplicación Android y mejoré su funcionamiento mientras se trasladaban procesos de escritorio a móvil.",
     technologies: ["Android", "Kotlin", "APIs REST", "Jetpack Compose"],
     company: "G&G Retail",
   },
   {
-    title: "Integracion con servicios externos",
+    title: "Integración con servicios externos",
     description:
-      "Exploracion e integracion de servicios externos para automatizar o mejorar procesos, como extraccion de informacion desde documentos y validacion de respuestas. Integrando en el Backend para un mejor control, seguridad y asi mismo poder reutilizarse en cualquier app o servicio Frontend.",
+      "Integré servicios para extraer información de documentos y validar respuestas desde el backend, de modo que pudieran reutilizarse en distintas aplicaciones.",
     technologies: ["OpenAI API", "Google Document AI", "OCR", "JSON"],
     company: "G&G Retail",
   },
   {
-    title: "Implementacion API REST",
+    title: "Implementación de API REST",
     description:
-      "Participación en el diseño e implementación de endpoints de la API REST para la gestión de datos de los empleados, aplicando capa de seguridad con JWT.",
+      "Participé en el diseño e implementación de endpoints para gestionar datos de empleados, con autenticación mediante JWT.",
     technologies: ["Java", "Spring Boot", "JWT"],
     company: "FRISBY",
   },
   {
     title: "Modelado de tablas para la base de datos",
     description:
-      "Modelado de las tablas a usar para la gestion de datos de los empleados, diseñando primero los diagramas para luego llevarlos a codigo SQL y finalmente poder anexar las tablas en la base de datos.",
+      "Diseñé diagramas y tablas SQL para organizar los datos de empleados en la base de datos.",
     technologies: ["SQL"],
     company: "FRISBY",
   },

@@ -1,4 +1,4 @@
-import { ArrowRight, FileDown, Mail } from "lucide-react";
+import { ArrowRight, Mail } from "lucide-react";
 import { profile } from "../data/profile";
 
 export function Hero() {
@@ -10,18 +10,18 @@ export function Hero() {
       <div className="hero__overlay" aria-hidden="true" />
 
       <div className="hero__content section-shell">
-        <p className="hero__eyebrow">DESAROLLADOR DE SOFTWARE</p>
+        <p className="hero__eyebrow">DESARROLLADOR DE SOFTWARE</p>
         <h1 id="hero-title">Hola, soy {profile.name}</h1>
         <p className="hero__subtitle">{profile.role}</p>
         <p className="hero__text">{profile.intro}</p>
 
         <div className="hero__actions" aria-label="Acciones principales">
-          <a className="button button--primary" href="#experiencia">
-            Ver experiencia
+          <a className="button button--primary" href="#proyectos">
+            Ver proyectos
             <ArrowRight size={18} aria-hidden="true" />
           </a>
-          <a className="button button--secondary" href={`mailto:${profile.email}`}>
-            Contactarme
+          <a className="button button--secondary" href="#contacto">
+            Hablemos de tu proyecto
             <Mail size={18} aria-hidden="true" />
           </a>
         </div>

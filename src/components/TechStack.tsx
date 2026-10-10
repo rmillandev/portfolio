@@ -6,9 +6,10 @@ export function TechStack() {
     <section className="section" id="tecnologias" aria-labelledby="tech-title">
       <div className="section-shell">
         <SectionHeader
-          eyebrow="Tecnologias"
-          title=""
-          description="Herramientas y tecnologias agrupadas por contexto"
+          id="tech-title"
+          eyebrow="Tecnologías"
+          title="Herramientas con las que trabajo"
+          description="Las elijo según lo que necesita cada proyecto."
         />
 
         <div className="tech-grid">

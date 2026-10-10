@@ -6,21 +6,13 @@ interface ProjectCardProps {
   index: number;
 }
 
-function linkProps(href: string) {
-  return href === "#"
-    ? {}
-    : {
-        target: "_blank",
-        rel: "noreferrer",
-      };
-}
-
 export function ProjectCard({ project, index }: ProjectCardProps) {
   const number = String(index + 1).padStart(2, "0");
 
   return (
     <article className={`project-card project-card--${project.accent}`}>
       <div className="project-card__visual" aria-hidden="true">
+        {project.visualLabel ? <span className="project-card__visual-label">{project.visualLabel}</span> : null}
         <div className="visual-window">
           <span />
           <span />
@@ -49,30 +41,31 @@ export function ProjectCard({ project, index }: ProjectCardProps) {
             <span>{project.problem}</span>
           </div>
           <div>
-            <strong>Solucion</strong>
+            <strong>Solución</strong>
             <span>{project.solution}</span>
           </div>
         </div>
 
-        <div className="tag-list" aria-label={`Tecnologias de ${project.title}`}>
-          {project.technologies.map((technology) => (
-            <span key={technology}>{technology}</span>
-          ))}
-        </div>
+        {project.technologies.length > 0 ? (
+          <div className="tag-list" aria-label={`Tecnologías de ${project.title}`}>
+            {project.technologies.map((technology) => (
+              <span key={technology}>{technology}</span>
+            ))}
+          </div>
+        ) : null}
 
         <div className="project-card__actions">
-          <a className="text-link" href={project.github} {...linkProps(project.github)}>
-            GitHub
-            <Github size={17} aria-hidden="true" />
-          </a>
-          {project.demo && project.demo !== "" ? (
-            <a className="text-link" href={project.demo} {...linkProps(project.demo)}>
-              Demo
+          {project.github ? (
+            <a className="text-link" href={project.github} target="_blank" rel="noreferrer">
+              GitHub <Github size={17} aria-hidden="true" />
+            </a>
+          ) : null}
+          {project.demo ? (
+            <a className="text-link" href={project.demo} target="_blank" rel="noreferrer">
+              Ver sitio
               <ExternalLink size={17} aria-hidden="true" />
             </a>
-          ) : (
-            <p className="text-link">Sin demo</p>
-          )}
+          ) : null}
         </div>
       </div>
     </article>

@@ -14,8 +14,9 @@ export function Experience() {
     <section className="section section--muted" id="experiencia" aria-labelledby="experience-title">
       <div className="section-shell">
         <SectionHeader
+          id="experience-title"
           eyebrow="Experiencia aplicada"
-          title="Problemas tecnicos resueltos en contextos reales"
+          title="Problemas técnicos resueltos en contextos reales"
         />
 
         {companies.map((c) => {

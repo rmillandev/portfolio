@@ -7,9 +7,10 @@ export function Projects() {
     <section className="section" id="proyectos" aria-labelledby="projects-title">
       <div className="section-shell">
         <SectionHeader
+          id="projects-title"
           eyebrow="Proyectos destacados"
-          title=""
-          description="Proyectos personales donde aplico de manera autodidacta mis conocimientos y retos en diferentes tecnologias"
+          title="Trabajo que puedes explorar"
+          description="Un producto en equipo y proyectos personales que muestran cómo abordo problemas reales."
         />
 
         <div className="projects-grid">

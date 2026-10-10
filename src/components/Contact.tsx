@@ -1,4 +1,4 @@
-import { FileDown, Github, Linkedin, Mail, MapPin } from "lucide-react";
+import { Github, Linkedin, Mail, MapPin } from "lucide-react";
 import { profile } from "../data/profile";
 import { SectionHeader } from "./SectionHeader";
 
@@ -7,9 +7,10 @@ export function Contact() {
     <section className="section contact-section" id="contacto" aria-labelledby="contact-title">
       <div className="section-shell contact-layout">
         <SectionHeader
+          id="contact-title"
           eyebrow="Contacto"
-          title="Hablemos"
-          description="Si quieres conocer mas sobre mi trabajo, revisar mis proyectos o hablar sobre una oportunidad, puedes contactarme por estos medios."
+          title="Cuéntame qué quieres construir"
+          description="Si tienes una idea o un proceso que quieres mejorar, cuéntame qué necesitas, cuál es tu objetivo y qué plazo tienes en mente. También podemos hablar de una landing page para tu negocio."
         />
 
         <div className="contact-panel">
@@ -35,8 +36,8 @@ export function Contact() {
           </div>
 
           <div className="contact-actions">
-            <a className="button button--primary" href={`mailto:${profile.email}`}>
-              Enviar correo
+            <a className="button button--primary" href={`mailto:${profile.email}?subject=Consulta%20sobre%20un%20proyecto`}>
+              Hablemos de tu proyecto
               <Mail size={18} aria-hidden="true" />
             </a>
             <a className="button button--secondary" href={profile.github} target="_blank" rel="noreferrer">

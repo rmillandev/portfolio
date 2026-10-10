@@ -1,4 +1,4 @@
-import { workPrinciples } from "../data/profile";
+import { strengths } from "../data/profile";
 import { SectionHeader } from "./SectionHeader";
 
 export function About() {
@@ -6,22 +6,21 @@ export function About() {
     <section className="section section--muted" id="sobre-mi" aria-labelledby="about-title">
       <div className="section-shell about-layout">
         <SectionHeader
-          eyebrow="Sobre mi"
-          title="Aprender construyendo y resolviendo problemas reales"
-          description=""
+          id="about-title"
+          eyebrow="Sobre mí"
+          title="Entender el problema antes de construir"
+          description="Soy desarrollador de software en Colombia. Me interesa crear soluciones prácticas y mantenibles que ayuden en la operación diaria de un negocio."
         />
 
         <div className="about-panel">
           <p>
-            Actualmente estoy fortaleciendo mis conocimientos en desarrollo fullstack, buenas practicas, clean code, cloud. Mi objetivo es seguir creciendo
-            como desarrollador y construir soluciones cada vez mas completas, ordenadas y utiles.
+            He trabajado en sistemas administrativos, aplicaciones móviles e integración de servicios. Me gusta entender el problema antes de elegir las herramientas y construir la solución.
           </p>
-
-          <ul className="principle-list">
-            {workPrinciples.map((principle) => (
-              <li key={principle}>{principle}</li>
+          <div className="strength-list" aria-label="Áreas de trabajo">
+            {strengths.map((strength) => (
+              <span key={strength}>{strength}</span>
             ))}
-          </ul>
+          </div>
         </div>
       </div>
     </section>

@@ -3,10 +3,10 @@ import { useEffect, useState } from "react";
 
 const navItems = [
   { label: "Inicio", href: "#inicio", id: "inicio" },
-  { label: "Experiencia", href: "#experiencia", id: "experiencia" },
+  { label: "Servicios", href: "#servicios", id: "servicios" },
   { label: "Proyectos", href: "#proyectos", id: "proyectos" },
-  { label: "Tecnologias", href: "#tecnologias", id: "tecnologias" },
-  { label: "Sobre mi", href: "#sobre-mi", id: "sobre-mi" },
+  { label: "Experiencia", href: "#experiencia", id: "experiencia" },
+  { label: "Sobre mí", href: "#sobre-mi", id: "sobre-mi" },
   { label: "Contacto", href: "#contacto", id: "contacto" },
 ];
 
@@ -35,7 +35,7 @@ export function Navbar() {
 
   return (
     <header className="site-header">
-      <nav className="navbar section-shell" aria-label="Navegacion principal">
+      <nav className="navbar section-shell" aria-label="Navegación principal">
         <a className="navbar__brand" href="#inicio" onClick={() => setIsOpen(false)}>
           <span className="navbar__mark">R</span>
           <span>Ronald</span>
@@ -44,7 +44,7 @@ export function Navbar() {
         <button
           className="navbar__toggle"
           type="button"
-          aria-label={isOpen ? "Cerrar menu" : "Abrir menu"}
+          aria-label={isOpen ? "Cerrar menú" : "Abrir menú"}
           aria-expanded={isOpen}
           aria-controls="primary-navigation"
           onClick={() => setIsOpen((current) => !current)}

@@ -217,7 +217,7 @@ ul {
 .hero__content {
   position: relative;
   z-index: 1;
-  padding: clamp(5rem, 9vw, 8rem) 0 clamp(3.5rem, 7vw, 5rem);
+  padding: clamp(3rem, 6vw, 5rem) 0 clamp(3rem, 6vw, 5rem);
 }
 
 .hero__eyebrow,
@@ -231,9 +231,9 @@ ul {
 }
 
 .hero h1 {
-  max-width: 720px;
+  max-width: 850px;
   margin-top: 1.2rem;
-  font-size: clamp(3rem, 8vw, 6.4rem);
+  font-size: clamp(3rem, 6vw, 5rem);
   line-height: 0.95;
   letter-spacing: 0;
 }
@@ -365,6 +365,37 @@ ul {
   align-items: start;
 }
 
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1rem;
+}
+
+.service-card {
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  background: rgba(21, 21, 27, 0.78);
+  padding: 1.5rem;
+}
+
+.service-card svg {
+  color: var(--cyan);
+  margin-bottom: 1.2rem;
+}
+
+.service-card h3 {
+  color: var(--text);
+  font-size: 1.2rem;
+}
+
+.service-card p {
+  margin-top: 0.7rem;
+}
+
+.services-link {
+  margin-top: 1.25rem;
+}
+
 .intro-copy,
 .about-panel,
 .contact-panel {
@@ -445,6 +476,24 @@ ul {
     linear-gradient(135deg, rgba(52, 211, 153, 0.24), transparent 44%),
     linear-gradient(180deg, rgba(255, 255, 255, 0.08), rgba(255, 255, 255, 0.02)),
     var(--surface-muted);
+}
+
+.project-card__visual-label {
+  position: absolute;
+  z-index: 1;
+  inset: 0;
+  display: grid;
+  place-items: center;
+  color: var(--text);
+  font-size: clamp(2rem, 5vw, 3rem);
+  font-weight: 800;
+  letter-spacing: -0.04em;
+  background: radial-gradient(circle at center, rgba(52, 211, 153, 0.15), transparent 65%);
+}
+
+.project-card__visual-label ~ .visual-window,
+.project-card__visual-label ~ .visual-grid {
+  display: none;
 }
 
 .project-card--amber .project-card__visual {
@@ -800,7 +849,8 @@ ul {
   .intro-grid,
   .about-layout,
   .contact-layout,
-  .projects-grid {
+  .projects-grid,
+  .services-grid {
     grid-template-columns: 1fr;
   }
 }
