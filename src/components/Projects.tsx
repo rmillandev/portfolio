@@ -10,7 +10,7 @@ export function Projects() {
           id="projects-title"
           eyebrow="Proyectos destacados"
           title="Trabajo que puedes explorar"
-          description="Un producto en equipo y proyectos personales que muestran cómo abordo problemas reales."
+          description="Un SaaS desarrollado en equipo, tres muestras personales de landing pages que diseñé y desarrollé, y otros proyectos técnicos."
         />
 
         <div className="projects-grid">

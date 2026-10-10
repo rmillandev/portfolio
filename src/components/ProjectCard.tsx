@@ -11,20 +11,26 @@ export function ProjectCard({ project, index }: ProjectCardProps) {
 
   return (
     <article className={`project-card project-card--${project.accent}`}>
-      <div className="project-card__visual" aria-hidden="true">
-        {project.visualLabel ? <span className="project-card__visual-label">{project.visualLabel}</span> : null}
-        <div className="visual-window">
-          <span />
-          <span />
-          <span />
-        </div>
-        <div className="visual-grid">
-          <span className="visual-node visual-node--large" />
-          <span className="visual-line" />
-          <span className="visual-node" />
-          <span className="visual-line visual-line--short" />
-          <span className="visual-node visual-node--soft" />
-        </div>
+      <div className="project-card__visual" aria-hidden={project.image ? undefined : true}>
+        {project.image ? (
+          <img src={project.image} alt={project.imageAlt ?? ""} loading="lazy" decoding="async" />
+        ) : (
+          <>
+            {project.visualLabel ? <span className="project-card__visual-label">{project.visualLabel}</span> : null}
+            <div className="visual-window">
+              <span />
+              <span />
+              <span />
+            </div>
+            <div className="visual-grid">
+              <span className="visual-node visual-node--large" />
+              <span className="visual-line" />
+              <span className="visual-node" />
+              <span className="visual-line visual-line--short" />
+              <span className="visual-node visual-node--soft" />
+            </div>
+          </>
+        )}
       </div>
 
       <div className="project-card__body">
@@ -34,6 +40,7 @@ export function ProjectCard({ project, index }: ProjectCardProps) {
         </div>
         <h3>{project.title}</h3>
         <p>{project.summary}</p>
+        {project.contribution ? <p className="project-card__contribution">Mi aporte: {project.contribution}</p> : null}
 
         <div className="case-points">
           <div>

@@ -9,6 +9,9 @@ export interface Project {
   status: string;
   github?: string;
   demo?: string;
+  image?: string;
+  imageAlt?: string;
+  contribution?: string;
   visualLabel?: string;
   accent: Accent;
 }
@@ -108,6 +111,45 @@ export const projects: Project[] = [
     github: "https://github.com/rmillandev/api-gymautomation-n8n",
     accent: "green",
   },
+  {
+    title: "NEXO Servicios",
+    summary: "Landing page demostrativa para servicios de mantenimiento, reparaciones e instalaciones.",
+    problem: "Presentar varios servicios y facilitar que una persona explique qué trabajo necesita cotizar.",
+    solution: "Organicé los servicios y un formulario que prepara la solicitud para enviarla por WhatsApp.",
+    technologies: [],
+    status: "Landing page · Muestra personal",
+    contribution: "Diseño y desarrollo",
+    demo: "https://landing-servicios-one.vercel.app/",
+    image: "/images/landing-servicios.jpg",
+    imageAlt: "Portada de la muestra NEXO Servicios con formulario de cotización",
+    accent: "amber",
+  },
+  {
+    title: "Miga & Mesa",
+    summary: "Landing page demostrativa para un café y restaurante, con menú y consulta de reservas.",
+    problem: "Ayudar a explorar la propuesta del lugar, consultar el menú y preparar una reserva.",
+    solution: "Diseñé una página con categorías de platos y un formulario que prepara la consulta por WhatsApp.",
+    technologies: [],
+    status: "Landing page · Muestra personal",
+    contribution: "Diseño y desarrollo",
+    demo: "https://landing-restaurante-ten.vercel.app/",
+    image: "/images/landing-restaurante.jpg",
+    imageAlt: "Portada de la muestra Miga & Mesa con fotografía de café y comida",
+    accent: "amber",
+  },
+  {
+    title: "NAVA Barber Studio",
+    summary: "Landing page demostrativa para barbería con servicios, galería y preparación de citas.",
+    problem: "Mostrar estilos y servicios para que un visitante pueda decidir qué consulta hacer.",
+    solution: "Diseñé una galería y un selector de servicio, estilo y horario que prepara un mensaje para WhatsApp.",
+    technologies: [],
+    status: "Landing page · Muestra personal",
+    contribution: "Diseño y desarrollo",
+    demo: "https://landing-barberia-ten.vercel.app/",
+    image: "/images/landing-barberia.jpg",
+    imageAlt: "Portada de la muestra NAVA Barber Studio con un barbero trabajando",
+    accent: "amber",
+  }
 ];
 
 export const experienceCases: ExperienceCase[] = [
